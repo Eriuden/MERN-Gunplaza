@@ -23,6 +23,10 @@ const gunplaSchema = new mongoose.Schema(
             type: String,
             trim: true,
             maxlength: 20,
-        }
-    }
+        },
+    },
+    {timestamps : true}
 )
+
+const gunplaModel = mongoose.model("gunpla", gunplaSchema)
+module.exports = gunplaModel

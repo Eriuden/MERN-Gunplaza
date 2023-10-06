@@ -21,11 +21,33 @@ const userSchema = new mongoose.Schema(
             unique: true,
         },
 
-        pasword: {
+        password: {
             type: String,
             required:true,
             max: 1024,
             minlength: 6
         },
-    }
+    },
+    {timestamps: true},
 )
+
+userSchema.pre("save", async function(next) {
+    const salt = await bcrypt.genSalt()
+    this.password = await bcrypt.hash(this.paswword, salt)
+    next()
+})
+
+userSchema.static.login = async function(email, password) {
+    const user = await this.findOne({email})
+    if (user) {
+        const auth = await bcrypt.compare(password, user.password)
+        if (auth) {
+            return user
+        }
+        throw Error("mot de passe incorrect")
+    }
+    throw Error ("Adresse mail incorrect")
+}
+
+const userModel = mongoose.model("user", userSchema)
+module.exports = userModel
