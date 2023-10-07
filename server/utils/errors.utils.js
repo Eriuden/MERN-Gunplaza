@@ -36,7 +36,7 @@ module.exports.uploadErrors = (err) => {
     errors.format = "format d'image non valide"
 
     if (err.message.includes("max size"))
-    errors.format = "taille maximale de fichier dépassés"
+    errors.maxSize = "taille maximale de fichier dépassés"
 
     return errors
 }
