@@ -5,7 +5,7 @@ export const  UPDATE_USER = "UPDATE_USER"
 export const UPDATE_PASSWORD ="UPDATE_PASSWORD"
 export const DELETE_USER = "DELETE_USER"
 
-export const GET_USER_ERRORS = "GET_USER_ERRORS"
+
 
 export const getUser = (uid) => {
     return (dispatch) => {
