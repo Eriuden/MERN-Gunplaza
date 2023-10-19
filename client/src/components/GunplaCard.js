@@ -1,8 +1,11 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {useSelector} from "react-redux"
 import { isEmpty } from '../utils'
+import { DeleteButton } from './DeleteButton'
+import { EditButton } from './editButton'
 
 export const GunplaCard = ({gunplaProps}) => {
+  
   const gunplas = useSelector((state)=> state.allGunplasReducer)
 
   
@@ -10,6 +13,7 @@ export const GunplaCard = ({gunplaProps}) => {
     <div key= {gunplaProps._id}>
       <>
         <div>
+          
           <img src={!isEmpty(gunplas[0] && 
           gunplas.map((gunpla) => {
             if (gunpla._id) return gunpla.picture
@@ -33,6 +37,12 @@ export const GunplaCard = ({gunplaProps}) => {
             if (gunpla._id) return gunpla.price
           }))}
           </h3>
+
+          <div className='flex flex-row'>
+            <h3>EditButton</h3>
+            <h3>DeleteButton</h3>
+          </div>
+
         </div>
       </>
     </div>
