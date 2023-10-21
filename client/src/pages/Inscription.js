@@ -68,25 +68,25 @@ export const Inscription = () => {
           rounded-md border-black mx-12 my-4 md:mx-[20%] lg:mx-[20%]" onSubmit={handleRegister}>
 
             <label htmlFor='name' className='my-2'>Votre nom</label>
-              <input className='border-2 border-black mx-12 sm: mx-52 md:mx-[30%]
+              <input className='border-2 border-black mx-12  md:mx-[30%]
               lg:mx-[30%]' type="text" name="name" id="name" value={name}
               onChange={(e)=> setName(e.target.value)}/>
             <div className='name error'></div>
 
             <label htmlFor='email' className='my-2'>Votre mail</label>
-              <input className='border-2 border-black mx-12 sm: mx-52 md:mx-[30%]
+              <input className='border-2 border-black mx-12  md:mx-[30%]
               lg:mx-[30%]' type="text" name="email" id="email" value={email}
               onChange={(e)=> setEmail(e.target.value)}/>
             <div className='email error'></div>
 
             <label htmlFor='password' className='my-2'>Votre mot de passe</label>
-              <input className='border-2 border-black mx-12 sm: mx-52 md:mx-[30%]
+              <input className='border-2 border-black mx-12  md:mx-[30%]
               lg:mx-[30%]' type="password" name="password" id="password" value={password}
               onChange={(e)=> setPassword(e.target.value)}/>
             <div className='password error'></div>
 
             <label htmlFor='password-conf' className='my-2'>Confirmer votre mot de passe</label>
-              <input className='border-2 border-black mx-12 sm: mx-52 md:mx-[30%]
+              <input className='border-2 border-black mx-12  md:mx-[30%]
               lg:mx-[30%]' type="password" name="password-conf" id="password-conf" value={passwordConf}
               onChange={(e)=> setPasswordConf(e.target.value)}/>
             <div className='password-conf error'></div>
