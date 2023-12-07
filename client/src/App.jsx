@@ -10,7 +10,7 @@ import { Inscription } from './pages/Inscription'
 import { Searcher } from './components/Searcher'
 
 function App() {
-  const {uid, setUid} = useState(null)
+  const [uid, setUid] = useState(null)
   const dispatch = useDispatch()
 
   useEffect(() => {
