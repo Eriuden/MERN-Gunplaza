@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react'
-import { useSelector, UseSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { UidContext } from './AppContext'
 import {Squash as Hamburger} from "hamburger-react"

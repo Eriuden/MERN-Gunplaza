@@ -9,7 +9,7 @@ export default function gunplaReducer(state = initialState, action) {
 
         case UPDATE_GUNPLA:
             return state.map((gunpla) => {
-                if (gunpla.id === action.payload.gunplaId) {
+                if (gunpla._id === action.payload.gunplaId) {
                     return {
                         ...gunpla,
                         name: action.payload.name,

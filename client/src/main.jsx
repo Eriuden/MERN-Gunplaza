@@ -3,16 +3,11 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import {BrowserRouter} from "react-router-dom"
 import {Provider} from "react-redux"
-import thunk from "redux-thunk"
-import reducers from "./redux/reducers/indexReducer"
-import { applyMiddleware } from 'redux'
+import {reducers} from "./redux/reducers/indexReducer"
 import {configureStore} from "@reduxjs/toolkit"
-import { composeWithDevTools } from 'redux-devtools-extension'
-
-
-const composedEnchancer = composeWithDevTools(applyMiddleware(thunk))
-const store = configureStore({reducer:reducers}, composedEnchancer)
 import './index.css'
+
+const store = configureStore({reducer: reducers})
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

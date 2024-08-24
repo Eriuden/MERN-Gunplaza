@@ -8,6 +8,7 @@ import { Home } from './pages/Home'
 import { Connexion } from './pages/Connexion'
 import { Inscription } from './pages/Inscription'
 import { Searcher } from './components/Searcher'
+import { getUser } from './redux/actions/user.action'
 
 function App() {
   const [uid, setUid] = useState(null)

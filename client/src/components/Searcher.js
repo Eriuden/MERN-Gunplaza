@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { useDispatch } from 'react-redux'
 import { getAllGunpla } from '../redux/actions/gunpla.action'
-import { useSelector, UseSelector } from 'react-redux/es/hooks/useSelector'
+import { useSelector } from 'react-redux/es/hooks/useSelector'
 import { GunplaCard } from './GunplaCard'
 
 export const Searcher = () => {

@@ -37,7 +37,7 @@ export const addGunpla = (data) => {
               if (res.data.errors) {
                 dispatch({type: GET_GUNPLA_ERROR, payload: res.data.errors})
               } else {
-                dispatch({ type: GET_GUNPLA_ERROR, paylolad:""})
+                dispatch({ type: GET_GUNPLA_ERROR, payload:""})
               }
             })
     }

@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import {useSelector} from "react-redux"
 import { isEmpty } from '../utils'
 import { DeleteButton } from './DeleteButton'
@@ -39,8 +39,8 @@ export const GunplaCard = ({gunplaProps}) => {
           </h3>
 
           <div className='flex flex-row'>
-            <h3>EditButton</h3>
-            <h3>DeleteButton</h3>
+            <h3><EditButton/></h3>
+            <h3><DeleteButton/></h3>
           </div>
 
         </div>
